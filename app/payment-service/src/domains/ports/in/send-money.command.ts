@@ -1,6 +1,10 @@
 import { AccountId } from '../../entities/account.entity';
 import { MoneyEntity } from '../../entities/money.entity';
 
+/**
+ * Command interface для отправки денег.
+ * Будет использовано в имплементации для адаптера и отображает его реализацию.
+ */
 export class SendMoneyCommand {
   constructor(
     private readonly _sourceAccountId: AccountId,

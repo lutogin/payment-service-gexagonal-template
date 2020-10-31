@@ -1,5 +1,5 @@
-import { AccountId } from '../../entities/account.entity';
+import { AccountEntity } from '../../entities/account.entity';
 
 export interface UpdateAccountActivityPort {
-  updateAccountActivityPort(accountId: AccountId);
+  updateAccountActivityPort(account: AccountEntity);
 }

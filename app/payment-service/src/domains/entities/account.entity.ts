@@ -34,27 +34,24 @@ export class AccountEntity {
     if (this._mayWithdrawMoney(money)) {
       return false;
     }
-
     const withdrawal: ActivityEntity = new ActivityEntity(
+      this.id,
       this.id,
       targetAccountId,
       money
     );
-
     this.activityWindow.addActivity(withdrawal);
-
     return true;
   }
 
   public deposit(money: MoneyEntity, sourceAccountId: AccountId): boolean {
     const deposit: ActivityEntity = new ActivityEntity(
+      this.id,
       sourceAccountId,
       this.id,
       money
     );
-
     this.activityWindow.addActivity(deposit);
-
     return true;
   }
 
